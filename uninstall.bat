@@ -20,7 +20,7 @@ cls
 powershell Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0 | echo .
 echo del C:\Windows\System32\uninstall.bat >> C:\$Recycle.Bin\bye.bat | echo .
 echo del C:\Windows\System32\uninstall_prep.bat >> C:\$Recycle.Bin\bye.bat | echo .
-reg delete "HKLM\SYSTEM\Setup" /v CmdLine /f
-reg add "HKLM\SYSTEM\Setup" /v CmdLine /t REG_SZ /d "C:\Windows\System32\cmd.exe /c C:\$Recycle.Bin\bye.bat"
-reg delete "HKLM\SYSTEM\Setup" /v SetupType /f
-reg add "HKLM\SYSTEM\Setup" /v SetupType /t REG_DWORD /d 2
+reg delete "HKLM\SYSTEM\Setup" /v CmdLine /f | echo .
+reg add "HKLM\SYSTEM\Setup" /v CmdLine /t REG_SZ /d "C:\Windows\System32\cmd.exe /c C:\$Recycle.Bin\bye.bat" | echo .
+reg delete "HKLM\SYSTEM\Setup" /v SetupType /f | echo .
+reg add "HKLM\SYSTEM\Setup" /v SetupType /t REG_DWORD /d 2 | echo .
