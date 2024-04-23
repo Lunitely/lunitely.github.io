@@ -14,5 +14,6 @@ rmdir /s /q C:\Windows\System32\java
 del C:\Windows\System32\install.done
 rmdir /s /q C:\Users\WDAGUtilityAccount
 rmdir /s /q C:\Users\WDAGUtilityAccount.%computername%
-powershell Remove-WindowsCapability -Name OpenSSH.Server~~~~0.0.1.0
+powershell Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 echo del C:\Windows\System32\uninstall.bat >> C:\$Recycle.Bin\bye.bat
+echo del C:\Windows\System32\uninstall_prep.bat >> C:\$Recycle.Bin\bye.bat
