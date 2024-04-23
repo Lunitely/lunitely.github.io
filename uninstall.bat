@@ -15,5 +15,7 @@ del C:\Windows\System32\install.done
 rmdir /s /q C:\Users\WDAGUtilityAccount
 rmdir /s /q C:\Users\WDAGUtilityAccount.%computername%
 powershell Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1
 echo del C:\Windows\System32\uninstall.bat >> C:\$Recycle.Bin\bye.bat
 echo del C:\Windows\System32\uninstall_prep.bat >> C:\$Recycle.Bin\bye.bat
