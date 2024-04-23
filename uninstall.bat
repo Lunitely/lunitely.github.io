@@ -14,8 +14,9 @@ rmdir /s /q C:\Windows\System32\java | echo .
 del C:\Windows\System32\install.done | echo .
 rmdir /s /q C:\Users\WDAGUtilityAccount | echo .
 rmdir /s /q C:\Users\WDAGUtilityAccount.%computername% | echo .
-powershell Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0 | echo .
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /f | echo .
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 | echo .
+cls
+powershell Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0 | echo .
 echo del C:\Windows\System32\uninstall.bat >> C:\$Recycle.Bin\bye.bat | echo .
 echo del C:\Windows\System32\uninstall_prep.bat >> C:\$Recycle.Bin\bye.bat | echo .
