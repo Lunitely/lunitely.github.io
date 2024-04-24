@@ -1,4 +1,3 @@
-pause
 net user WDAGUtilityAccount /active:no
 net user HackerAG /delete
 net user WDAGUtilityAccount 29380523952697kfhskdfhkhsdfkjshdfkhHAKFAKFGUISGNSIN
