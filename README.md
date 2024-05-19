@@ -1,1 +1,1 @@
-echo "Get-AppxPackage *WindowsStore* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register '$($_.InstallLocation)\AppXManifest.xml'}" >> %LunitelyInstallTemp%\install_ms-store.ps1 && powershell %LunitelyInstallTemp%\install_ms-store.ps1 && del %LunitelyInstallTemp%\install_ms-store.ps1	
+Get-AppxPackage *WindowsStore* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register '$($_.InstallLocation)\AppXManifest.xml'}
